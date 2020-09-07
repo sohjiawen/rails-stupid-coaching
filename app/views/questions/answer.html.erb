@@ -3,9 +3,8 @@
 <head>
 </head>
 <body>
-  <h1>Answer</h1>
-
-  <div class="container">
+  <div>
+    <h1>Answer</h1>
     <% if @answer == "I'm going to work!" %>
     <div class="question">
       <%= @answer %>
@@ -28,7 +27,7 @@
       <%= "I don't care, get dressed and go to work!" %>
     </div>
     <% end %>
+    <div class="btn btn-primary"><%= link_to "Ask", ask_path %></div>
   </div>
 
-  <div class="btn btn-primary"><%= link_to "Ask", ask_path %></div>
 </body>
