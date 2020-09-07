@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <h1>Answer</h1>
+
+  <div class="container">
+    <% if @answer == "I'm going to work!" %>
+    <div class="question">
+      <%= @answer %>
+    </div>
+    <div class="answer">
+      <%= "Great!" %>
+    </div>
+    <% elsif @answer.include?("?") %>
+    <div class="question">
+      <%= @answer %>
+    </div>
+    <div class="answer">
+      <%= "Silly question, get dressed and go to work!" %>
+    </div>
+    <% else %>
+    <div class="question">
+      <%= @answer %>
+    </div>
+    <div class="answer">
+      <%= "I don't care, get dressed and go to work!" %>
+    </div>
+    <% end %>
+  </div>
+
+  <div class="btn btn-primary"><%= link_to "Ask", ask_path %></div>
+</body>
